@@ -63,11 +63,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CollectibleBase.cs" />
     <Compile Include="Assets\Scripts\Common\AudioHelper.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\HealthIncrease.cs" />
+    <Compile Include="Assets\Scripts\HealthUpdate.cs" />
+    <Compile Include="Assets\Scripts\Invincible.cs" />
     <Compile Include="Assets\Scripts\Killer.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\PowerUpBase.cs" />
+    <Compile Include="Assets\Scripts\ScoreUp.cs" />
+    <Compile Include="Assets\Scripts\Slower.cs" />
+    <Compile Include="Assets\Scripts\SpeedIncrease.cs" />
     <Compile Include="Assets\Scripts\TankController.cs" />
+    <Compile Include="Assets\Scripts\Treasure.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Daniel/Desktop/Unity Projects/Scripting II/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

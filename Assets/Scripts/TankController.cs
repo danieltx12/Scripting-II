@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class TankController : MonoBehaviour
 {
+    
     [SerializeField] float _moveSpeed = .25f;
+    public float MaxSpeed
+    {
+        get => _moveSpeed;
+        set => _moveSpeed = value;
+    }
     [SerializeField] float _turnSpeed = 2f;
 
     Rigidbody _rb = null;
@@ -18,6 +24,10 @@ public class TankController : MonoBehaviour
     {
         MoveTank();
         TurnTank();
+        if(_moveSpeed < 0.1f)
+        {
+            _moveSpeed = 0.1f;
+        }
     }
 
     public void MoveTank()
