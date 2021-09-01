@@ -37,7 +37,7 @@ public abstract class PowerUpBase : MonoBehaviour
         {
             PowerUp(player);
             //spawn particles & sfx because we need to disable object
-            // Feedback();
+             Feedback();
 
             _collider.enabled = !_collider.enabled;
             _renderer.enabled = !_renderer.enabled;
@@ -53,5 +53,19 @@ public abstract class PowerUpBase : MonoBehaviour
         PowerDown(player);
         Debug.Log("DONE!!!!");
         gameObject.SetActive(false);
+    }
+
+    private void Feedback()
+    {
+        //particles
+        if (_collectParticles != null)
+        {
+            _collectParticles = Instantiate(_collectParticles, transform.position, Quaternion.identity);
+        }
+        //audio TODO
+        if (_collectSound != null)
+        {
+            AudioHelper.PlayClip2D(_collectSound, 1f);
+        }
     }
 }

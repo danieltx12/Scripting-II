@@ -38,6 +38,10 @@ public class Enemy : MonoBehaviour
         {
             _impactParticles = Instantiate(_impactParticles, transform.position, Quaternion.identity);
         }
+        if (_impactSound != null)
+        {
+            AudioHelper.PlayClip2D(_impactSound, 1f);
+        }
     }
 
     private void FixedUpdate()

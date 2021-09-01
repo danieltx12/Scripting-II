@@ -361,6 +361,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8005007102643368561, guid: 232b84894ac86bb41957b3ffdcd1f0ff,
+        type: 3}
+      propertyPath: _collectParticles
+      value: 
+      objectReference: {fileID: 6532566360622961714, guid: 5577ad7dc134b644485f64875f92db85,
+        type: 3}
+    - target: {fileID: 8005007102643368561, guid: 232b84894ac86bb41957b3ffdcd1f0ff,
+        type: 3}
+      propertyPath: _collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fdaf57b0798f24c458969b2a9a1e5c76, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 232b84894ac86bb41957b3ffdcd1f0ff, type: 3}
 --- !u!1 &732590192
@@ -931,6 +942,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8005007102643368561, guid: 232b84894ac86bb41957b3ffdcd1f0ff,
+        type: 3}
+      propertyPath: _collectParticles
+      value: 
+      objectReference: {fileID: 6532566360622961714, guid: 5577ad7dc134b644485f64875f92db85,
+        type: 3}
+    - target: {fileID: 8005007102643368561, guid: 232b84894ac86bb41957b3ffdcd1f0ff,
+        type: 3}
+      propertyPath: _collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fdaf57b0798f24c458969b2a9a1e5c76, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 232b84894ac86bb41957b3ffdcd1f0ff, type: 3}
 --- !u!1 &1164151239
@@ -1134,8 +1156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4e16249c0413b4f967754d4cb9f5cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collectParticles: {fileID: 0}
-  _collectSound: {fileID: 0}
+  _collectParticles: {fileID: 7945315139935315423, guid: 5a5107a8f5a32504a8c7b3cc35fa4e65,
+    type: 3}
+  _collectSound: {fileID: 8300000, guid: e71f98be68811d34fa3493ece65a988d, type: 3}
   _movementSpeed: 1
   powerupDuration: 5
 --- !u!1 &1346226021
@@ -1589,6 +1612,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8005007102643368561, guid: 232b84894ac86bb41957b3ffdcd1f0ff,
+        type: 3}
+      propertyPath: _collectParticles
+      value: 
+      objectReference: {fileID: 6532566360622961714, guid: 5577ad7dc134b644485f64875f92db85,
+        type: 3}
+    - target: {fileID: 8005007102643368561, guid: 232b84894ac86bb41957b3ffdcd1f0ff,
+        type: 3}
+      propertyPath: _collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fdaf57b0798f24c458969b2a9a1e5c76, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 232b84894ac86bb41957b3ffdcd1f0ff, type: 3}
 --- !u!1001 &1106015831947872536
@@ -1658,6 +1692,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1106015833721416859, guid: 203cd6bc26a42d445bea49109d61a9ba,
+        type: 3}
+      propertyPath: _collectParticles
+      value: 
+      objectReference: {fileID: 3223072060655555173, guid: 7a7536a00d8ba094e987f0c54d2a9e30,
+        type: 3}
+    - target: {fileID: 1106015833721416859, guid: 203cd6bc26a42d445bea49109d61a9ba,
+        type: 3}
+      propertyPath: _collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fdaf57b0798f24c458969b2a9a1e5c76, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 203cd6bc26a42d445bea49109d61a9ba, type: 3}
 --- !u!1001 &3145399493886614056
@@ -1727,6 +1772,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3145399494148653513, guid: c538ef45e88bd94458e4900138ea8a5c,
+        type: 3}
+      propertyPath: _impactParticles
+      value: 
+      objectReference: {fileID: 2988869364374920915, guid: f8aae5049dfe58f43932f7dd062b2937,
+        type: 3}
+    - target: {fileID: 3145399494148653513, guid: c538ef45e88bd94458e4900138ea8a5c,
+        type: 3}
+      propertyPath: _impactSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d7c021e6734671a488ed7025a267a333, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c538ef45e88bd94458e4900138ea8a5c, type: 3}
 --- !u!1001 &3348532441175914099
@@ -1806,6 +1862,17 @@ PrefabInstance:
       propertyPath: _speedAmount
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 3348532442552622309, guid: fdf458a79cb09324cb3ab3183464b572,
+        type: 3}
+      propertyPath: _collectParticles
+      value: 
+      objectReference: {fileID: 6532566360622961714, guid: 5577ad7dc134b644485f64875f92db85,
+        type: 3}
+    - target: {fileID: 3348532442552622309, guid: fdf458a79cb09324cb3ab3183464b572,
+        type: 3}
+      propertyPath: _collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e71f98be68811d34fa3493ece65a988d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdf458a79cb09324cb3ab3183464b572, type: 3}
 --- !u!1001 &5831831031791770042
@@ -1875,6 +1942,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2073384954733680907, guid: d0da4298bcfa7f342a94a98a9a4589c4,
+        type: 3}
+      propertyPath: _impactParticles
+      value: 
+      objectReference: {fileID: 6262047374209788686, guid: e88d0ecf2bb1a3940953ded255d53355,
+        type: 3}
+    - target: {fileID: 2073384954733680907, guid: d0da4298bcfa7f342a94a98a9a4589c4,
+        type: 3}
+      propertyPath: _impactSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d7c021e6734671a488ed7025a267a333, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0da4298bcfa7f342a94a98a9a4589c4, type: 3}
 --- !u!1001 &8325551246565282747
@@ -1944,5 +2022,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8325551248272880563, guid: f89a830994ef2764cb0f130a56ea9d5b,
+        type: 3}
+      propertyPath: _impactParticles
+      value: 
+      objectReference: {fileID: 1504040661662199631, guid: 14d5cba793648d94f97bc427d7a95e67,
+        type: 3}
+    - target: {fileID: 8325551248272880563, guid: f89a830994ef2764cb0f130a56ea9d5b,
+        type: 3}
+      propertyPath: _impactSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d7c021e6734671a488ed7025a267a333, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f89a830994ef2764cb0f130a56ea9d5b, type: 3}
