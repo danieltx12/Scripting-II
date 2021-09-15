@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     public GameObject _tankBody;
     public GameObject _turret;
     public GameObject HealthLevel;
+    private bool iFrames = false;
+    public Material _damageMat;
 
     TankController _tankController;
 
@@ -43,11 +45,12 @@ public class Player : MonoBehaviour
 
     public void DecreaseHealth(int amount)
     {
-        if (isInvincible == false)
+        if (isInvincible == false && iFrames == false)
         {
             _currentHealth -= amount;
             Debug.Log("Player's health: " + _currentHealth);
             _healthUpdater.healthUpdate(_currentHealth);
+            StartCoroutine("TempInvuln");
             if (_currentHealth <= 0)
             {
                 Kill();
@@ -79,4 +82,18 @@ public class Player : MonoBehaviour
         _turret.GetComponent<MeshRenderer>().material = _normalMat;
     }
 
+    private void DamageMaterialChange()
+    {
+        _tankBody.GetComponent<MeshRenderer>().material = _damageMat;
+        _turret.GetComponent<MeshRenderer>().material = _damageMat;
+    }
+
+    IEnumerator TempInvuln()
+    {
+        DamageMaterialChange();
+        isInvincible = true;
+        yield return new WaitForSeconds(0.5f);
+        NormalMaterialChange();
+        isInvincible = false;
+    }
 }

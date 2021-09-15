@@ -12,6 +12,10 @@ public class TankController : MonoBehaviour
         set => _moveSpeed = value;
     }
     [SerializeField] float _turnSpeed = 2f;
+    public GameObject Projectile;
+    public float Velocity = 200f;
+    private bool cooldown = true;
+    public GameObject Cannon;
 
     Rigidbody _rb = null;
 
@@ -24,6 +28,11 @@ public class TankController : MonoBehaviour
     {
         MoveTank();
         TurnTank();
+        if (Input.GetKey(KeyCode.Space) & cooldown)
+        {
+            Debug.Log("Space Bar Down!!");
+            Shoot();
+        }
         if(_moveSpeed < 0.1f)
         {
             _moveSpeed = 0.1f;
@@ -50,4 +59,20 @@ public class TankController : MonoBehaviour
         // apply quaternion to the rigidbody
         _rb.MoveRotation(_rb.rotation * turnOffset);
     }
+
+   private void Shoot()
+    {
+        GameObject projectile = Instantiate(Projectile, Cannon.transform.position, Cannon.transform.rotation);
+        projectile.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, Velocity));
+        StartCoroutine("Cooldown");
+        
+    }
+
+    private IEnumerator Cooldown()
+    {
+        cooldown = false;
+        yield return new WaitForSeconds(0.5f);
+        cooldown = true;
+    }
+
 }

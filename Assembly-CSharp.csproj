@@ -63,15 +63,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\mine.cs" />
+    <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\CollectibleBase.cs" />
     <Compile Include="Assets\Scripts\Common\AudioHelper.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\explosion.cs" />
     <Compile Include="Assets\Scripts\HealthIncrease.cs" />
     <Compile Include="Assets\Scripts\HealthUpdate.cs" />
     <Compile Include="Assets\Scripts\Invincible.cs" />
     <Compile Include="Assets\Scripts\Killer.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PowerUpBase.cs" />
+    <Compile Include="Assets\Scripts\projectile.cs" />
     <Compile Include="Assets\Scripts\ScoreUp.cs" />
     <Compile Include="Assets\Scripts\Slower.cs" />
     <Compile Include="Assets\Scripts\SpeedIncrease.cs" />
