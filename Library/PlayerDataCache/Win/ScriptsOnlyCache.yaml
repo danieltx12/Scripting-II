@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - Boss
     - Destrucible
     - Enemy
+    - GameController
     - Health
     - HealthIncrease
     - HealthUpdate
@@ -26,7 +27,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -91,29 +91,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10294}
     - Class: 114
-      Script: {instanceID: 10622}
+      Script: {instanceID: 10296}
     - Class: 114
-      Script: {instanceID: 10722}
+      Script: {instanceID: 10626}
     - Class: 114
-      Script: {instanceID: 10760}
+      Script: {instanceID: 10726}
     - Class: 114
-      Script: {instanceID: 10816}
+      Script: {instanceID: 10764}
     - Class: 114
-      Script: {instanceID: 10892}
+      Script: {instanceID: 10820}
     - Class: 114
       Script: {instanceID: 10896}
     - Class: 114
-      Script: {instanceID: 11006}
+      Script: {instanceID: 10900}
     - Class: 114
-      Script: {instanceID: 11298}
+      Script: {instanceID: 11010}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11032}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11274}
     - Class: 114
-      Script: {instanceID: 20104}
+      Script: {instanceID: 11306}
     - Class: 114
-      Script: {instanceID: 21626}
+      Script: {instanceID: 11356}
+    - Class: 114
+      Script: {instanceID: 11376}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -361,6 +363,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Destrucible
+  - hash:
+      serializedVersion: 2
       Hash: 7198358a90497a1e3ed832e4232f8588
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -523,6 +531,12 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Health
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -551,6 +565,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -641,24 +661,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Health
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Destrucible
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameController
   platform: 5
   scenePathNames:
   - Assets/Scenes/Sandbox.unity
