@@ -67,10 +67,14 @@
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\CollectibleBase.cs" />
     <Compile Include="Assets\Scripts\Common\AudioHelper.cs" />
+    <Compile Include="Assets\Scripts\Destrucible.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\explosion.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\HealthIncrease.cs" />
     <Compile Include="Assets\Scripts\HealthUpdate.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\InterfaceDamageable.cs" />
     <Compile Include="Assets\Scripts\Invincible.cs" />
     <Compile Include="Assets\Scripts\Killer.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />

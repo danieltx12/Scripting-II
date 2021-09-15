@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     public GameObject HealthLevel;
     private bool iFrames = false;
     public Material _damageMat;
+    public GameObject Explosion;
+    [SerializeField] AudioClip _impactSound;
 
     TankController _tankController;
 
@@ -60,8 +62,8 @@ public class Player : MonoBehaviour
     public void Kill()
     {
         gameObject.SetActive(false);
-        //play particles
-        //play sounds
+        Instantiate(Explosion, transform.position, transform.rotation);
+        AudioHelper.PlayClip2D(_impactSound, 1f);
     }
 
     public void TreasureCounter()
@@ -88,12 +90,5 @@ public class Player : MonoBehaviour
         _turret.GetComponent<MeshRenderer>().material = _damageMat;
     }
 
-    IEnumerator TempInvuln()
-    {
-        DamageMaterialChange();
-        isInvincible = true;
-        yield return new WaitForSeconds(0.5f);
-        NormalMaterialChange();
-        isInvincible = false;
-    }
+   
 }

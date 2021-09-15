@@ -9,11 +9,10 @@ public class mine : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Player player = other.gameObject.GetComponent<Player>();
-        projectile Projectile = other.gameObject.GetComponent<projectile>();
-        if (player != null)
+        IDamageable damageable = other.gameObject.GetComponent<IDamageable>();
+        if (damageable != null)
         {
-            Instantiate(Explosion, player.transform.position, player.gameObject.transform.rotation);
+            Instantiate(Explosion, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
 

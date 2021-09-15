@@ -11,22 +11,11 @@ public class explosion : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
-        Enemy enemy = other.gameObject.GetComponent<Enemy>();
-        Player player = other.gameObject.GetComponent<Player>();
-        mine Mine = other.gameObject.GetComponent<mine>();
-        if (enemy != null)
+        IDamageable damageable = other.gameObject.GetComponent<IDamageable>();
+        if (damageable != null)
         {
-            Destroy(other.gameObject);
+            damageable.TakeDamage(1);
 
-        }
-        else if (player != null)
-        {
-            player.DecreaseHealth(1);
-
-        }
-        else if (Mine != null)
-        {
-            Destroy(other.gameObject);
         }
     }
 

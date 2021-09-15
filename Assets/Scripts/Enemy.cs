@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] int _damageAmount = 1;
     [SerializeField] ParticleSystem _impactParticles;
     [SerializeField] AudioClip _impactSound;
+    public int damage;
+
 
     Rigidbody _rb;
 
@@ -46,11 +48,10 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
-    }
-
-    public void Move()
-    {
         
     }
+
+   
+
+ 
 }

@@ -19,6 +19,9 @@ public class Boss : MonoBehaviour
     public GameObject Cannon;
     private Transform spawnPoint;
     public GameObject mine;
+    [SerializeField] ParticleSystem _impactParticles;
+    [SerializeField] AudioClip _impactSound;
+    
 
 
 
@@ -42,21 +45,23 @@ public class Boss : MonoBehaviour
 
         if(cooldown)
         {
-            //Shoot();
+            Shoot();
         }
       
         if (RNG < 5  && DistanceToHome > 4 && LastMove)
         {
-            Mine();
+            
             GoHome();
             
         }
         else if (RNG >= 8)
         {
+            
             Charge();
         }
         else
         {
+            Mine();
             MoveTowards();
         }
 
@@ -98,14 +103,14 @@ public class Boss : MonoBehaviour
         Player player = other.gameObject.GetComponent<Player>();
         if (player != null)
         {
-            PlayerImpact(player);
-           // ImpactFeedback();
+           PlayerImpact(player);
+           ImpactFeedback();
         }
 
         LastMove = true;
         RNG = 2;
     }
-    /*private void ImpactFeedback()
+    private void ImpactFeedback()
     {
         //particles
         if (_impactParticles != null)
@@ -117,7 +122,7 @@ public class Boss : MonoBehaviour
             AudioHelper.PlayClip2D(_impactSound, 1f);
         }
     }
-    */
+    
 
     private void Mine()
     {
@@ -135,7 +140,7 @@ public class Boss : MonoBehaviour
     {
         Cannon.transform.LookAt(target);
         GameObject projectile = Instantiate(Projectile, Cannon.transform.position, Cannon.transform.rotation);
-        projectile.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 1500));
+        projectile.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 1000));
         StartCoroutine("Cooldown");
 
     }

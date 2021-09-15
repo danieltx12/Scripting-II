@@ -1,7 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Boss
+    - Destrucible
     - Enemy
+    - Health
     - HealthIncrease
     - HealthUpdate
     - Invincible
@@ -12,6 +15,9 @@ ScriptsOnlyBuild:
     - SpeedIncrease
     - TankController
     - Treasure
+    - explosion
+    - mine
+    - projectile
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -20,6 +26,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -86,15 +93,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10622}
     - Class: 114
-      Script: {instanceID: 10886}
+      Script: {instanceID: 10722}
     - Class: 114
-      Script: {instanceID: 10998}
+      Script: {instanceID: 10760}
     - Class: 114
-      Script: {instanceID: 11290}
+      Script: {instanceID: 10816}
     - Class: 114
-      Script: {instanceID: 11340}
+      Script: {instanceID: 10892}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 10896}
+    - Class: 114
+      Script: {instanceID: 11006}
+    - Class: 114
+      Script: {instanceID: 11298}
+    - Class: 114
+      Script: {instanceID: 11348}
+    - Class: 114
+      Script: {instanceID: 11368}
+    - Class: 114
+      Script: {instanceID: 20104}
+    - Class: 114
+      Script: {instanceID: 21626}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -168,7 +187,7 @@ ScriptsOnlyBuild:
     className: ScoreUp
   - hash:
       serializedVersion: 2
-      Hash: 093d8a394645ef3180c525e8d28a2545
+      Hash: d76f286fbcc7340b3ed405ff02f45a8a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -222,7 +241,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: f357c1a0f02830321e913c9aaf161bdc
+      Hash: 847b84db7040fdc1b5f176d47d8f3f05
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Slower
@@ -342,7 +361,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: e984a7d35082790cb337975e7d8b5e8d
+      Hash: 7198358a90497a1e3ed832e4232f8588
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Killer
@@ -396,7 +415,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: e984a7d35082790cb337975e7d8b5e8d
+      Hash: 7198358a90497a1e3ed832e4232f8588
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -406,6 +425,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 63aee1d7da0d80b7a917efd2a12ef705
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: projectile
   - hash:
       serializedVersion: 2
       Hash: 12e64d607873da15ad3f833620350d51
@@ -418,6 +443,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: explosion
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -450,6 +481,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: abb3b57b665dce00550b61b012656fbc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Boss
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -460,6 +497,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealthUpdate
+  - hash:
+      serializedVersion: 2
+      Hash: 9a1f26db846332e0011af9486d705590
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: mine
   - hash:
       serializedVersion: 2
       Hash: ee0cef6caaac8ae485bfa82f000f0f7b
@@ -528,7 +571,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 5b028bc6ea0e0224df28939be5610a5d
+      Hash: d8cddb068648804839586ef6f7a8fc21
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TankController
@@ -598,8 +641,25 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Health
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Destrucible
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameController
   platform: 5
   scenePathNames:
   - Assets/Scenes/Sandbox.unity
-  playerPath: C:/Users/Daniel/Desktop/KerberDaniel_HW01/KerberDaniel_HW01/Scripting
-    II.exe
+  playerPath: C:/Users/Daniel/Desktop/ufckthisdame/Scripting II.exe
