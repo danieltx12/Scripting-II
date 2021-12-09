@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Boss
+    - CameraShake
     - Destrucible
     - Enemy
     - GameController
@@ -27,6 +28,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -116,6 +118,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11356}
     - Class: 114
       Script: {instanceID: 11376}
+    - Class: 114
+      Script: {instanceID: 23712}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -189,7 +193,7 @@ ScriptsOnlyBuild:
     className: ScoreUp
   - hash:
       serializedVersion: 2
-      Hash: d76f286fbcc7340b3ed405ff02f45a8a
+      Hash: e1eee8e9b86d62ce0c7532c471128931
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -489,7 +493,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: abb3b57b665dce00550b61b012656fbc
+      Hash: fca160744259a3652aa9d9cfd5bf5c4c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Boss
@@ -501,7 +505,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 766e965fe88dc0e49081242d0d4ed6f6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealthUpdate
@@ -531,7 +535,7 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: aef9386513e10c2b58b4c2172faf4e3c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Health
@@ -661,7 +665,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: b2c784af4e4aa0feb1642d243bf619c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraShake
   platform: 5
   scenePathNames:
   - Assets/Scenes/Sandbox.unity
-  playerPath: C:/Users/Daniel/Desktop/ufckthisdame/Scripting II.exe
+  playerPath: C:/Users/Daniel/Desktop/01b build/Scripting II.exe

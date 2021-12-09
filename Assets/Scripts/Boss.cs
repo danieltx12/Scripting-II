@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
@@ -21,13 +22,17 @@ public class Boss : MonoBehaviour
     public GameObject mine;
     [SerializeField] ParticleSystem _impactParticles;
     [SerializeField] AudioClip _impactSound;
-    
+    [SerializeField] Text Tell;
+    Color tempColor;
+
 
 
 
     private void Awake()
     {
-        
+        tempColor = Tell.color;
+        tempColor.a = 0f;
+        Tell.color = tempColor;
         StartCoroutine("RandomMove");
         StartCoroutine("Cooldown");
         home = this.transform.position;
@@ -57,7 +62,7 @@ public class Boss : MonoBehaviour
         else if (RNG >= 8)
         {
             
-            Charge();
+            StartCoroutine("ChargeAnti");
         }
         else
         {
@@ -83,13 +88,23 @@ public class Boss : MonoBehaviour
         LastMove = true;
        
     }
+    IEnumerator ChargeAnti()
+    {
+        tempColor.a = 255f;
+        Tell.color = tempColor;
+        yield return new WaitForSeconds(1f);
+        Charge();
+
+    }
+
     private void Charge()
     {
+        tempColor.a = 0f;
+        Tell.color = tempColor;
         playerPos = target.transform.position;
         newPos = new Vector3(playerPos.x, 1.443093f, playerPos.z);
         transform.position = Vector3.MoveTowards(transform.position, newPos, 14f * Time.deltaTime);
         LastMove = true;
-
     }
 
     private void GoHome()
@@ -140,7 +155,7 @@ public class Boss : MonoBehaviour
     {
         Cannon.transform.LookAt(target);
         GameObject projectile = Instantiate(Projectile, Cannon.transform.position, Cannon.transform.rotation);
-        projectile.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 1000));
+        projectile.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 1000f));
         StartCoroutine("Cooldown");
 
     }

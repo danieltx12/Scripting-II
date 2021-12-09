@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public Material _damageMat;
     public GameObject Explosion;
     [SerializeField] AudioClip _impactSound;
+    public CameraShake cameraShake;
 
     TankController _tankController;
 
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _currentHealth = _maxHealth;
+        _healthUpdater.healthUpdate(_currentHealth);
     }
     
     public void IncreaseHealth(int amount)
@@ -52,7 +54,7 @@ public class Player : MonoBehaviour
             _currentHealth -= amount;
             Debug.Log("Player's health: " + _currentHealth);
             _healthUpdater.healthUpdate(_currentHealth);
-            StartCoroutine("TempInvuln");
+            StartCoroutine(cameraShake.Shake(1.5f, 0.1f));
             if (_currentHealth <= 0)
             {
                 Kill();
@@ -90,5 +92,9 @@ public class Player : MonoBehaviour
         _turret.GetComponent<MeshRenderer>().material = _damageMat;
     }
 
-   
+    private void Update()
+    {
+        _healthUpdater.healthUpdate(_currentHealth);
+    }
+
 }

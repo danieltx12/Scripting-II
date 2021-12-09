@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\mine.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
+    <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\CollectibleBase.cs" />
     <Compile Include="Assets\Scripts\Common\AudioHelper.cs" />
     <Compile Include="Assets\Scripts\Destrucible.cs" />

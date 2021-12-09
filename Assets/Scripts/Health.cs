@@ -7,15 +7,18 @@ public class Health : MonoBehaviour, IDamageable
     private int _currentHealth;
     private int _maxHealth = 3;
     private bool isInvincible = false;
+    public Player player;
 
     public void Awake()
     {
         _currentHealth = _maxHealth;
+        player = GetComponent<Player>();
     }
     public void TakeDamage(int damage)
     {
         if (!isInvincible)
         {
+            player.DecreaseHealth(damage);
             _currentHealth -= damage;
             StartCoroutine("TempInvuln");
         }
@@ -33,7 +36,7 @@ public class Health : MonoBehaviour, IDamageable
     IEnumerator TempInvuln()
     {
         isInvincible = true;
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(1.5f);
         isInvincible = false;
     }
 }

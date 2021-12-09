@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class HealthUpdate : MonoBehaviour
 {
+    [SerializeField] Image health;
+    
     void Start()
     {
-        Text score;
-        score = GetComponent<Text>();
-        score.text = "3";
+        health = GetComponent<Image>();
 
     }
 
+
     public void healthUpdate(int _currentHealth)
     {
-        Text health;
-        health = GetComponent<Text>();
-        health.text = _currentHealth.ToString();
+        
+        health.rectTransform.sizeDelta = new Vector2((_currentHealth * 100), 20);
     }
 
 
